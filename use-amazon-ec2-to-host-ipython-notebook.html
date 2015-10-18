@@ -1,49 +1,54 @@
-<!doctype html>
-<html lang="">	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<title>Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook - Pengyin Shan and Math, Finance, Statistics</title>	
+	<meta charset="utf-8">
+	<title>Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook — Pengyin Shan and Math, Finance, Statistics</title>
+	<meta name="description" content="Title: Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook; Date: 2015-01-13; Author: Pengyin Shan">
 	<meta name="author" content="Pengyin Shan">
-	
-
-  <meta name="description" content="This post is trannsferred from my old blog site, about using Amazon EC2 to host IPython Notebook.">
-
-
-
-	<link rel="stylesheet" href="http://shanpy.github.io/mathcorner/theme/css/main.css" type="text/css" />
-		
-	  <script type="text/javascript" src="http://shanpy.github.io/mathcorner/theme/js/custom_scripts.js"></script>
-
-
-    <link href="http://shanpy.github.io/mathcorner/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pengyin Shan and Math, Finance, Statistics Atom Feed" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://shanpy.github.io/mathcorner/theme/html5.js"></script>
+		<![endif]-->
+	<link href="http://shanpy.github.io/mathcorner/theme/css/ipython.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/simplex/bootstrap.min.css" rel="stylesheet">
+	<link href="http://shanpy.github.io/mathcorner/theme/css/local.css" rel="stylesheet">
+	<link href="http://shanpy.github.io/mathcorner/theme/css/pygments.css" rel="stylesheet">
 </head>
-	
 <body>
-
-    <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	      <a href="http://shanpy.github.io/mathcorner/feeds/all.atom.xml" rel="alternate"><img src="http://shanpy.github.io/mathcorner/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
-	    </div>
-		<a href="http://shanpy.github.io/mathcorner" class="title">Pengyin Shan and Math, Finance, Statistics</a>
-      </header>
-	
-	  <div class="wrapper">
-
-		  <div role="main" class="content">
-	<article class="full">
-		
-		<h1>Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook</h1>
-		
-<div class="metadata">
-  <time datetime="2015-01-13T00:00:00-05:00" pubdate>Tue 13 January 2015</time>
-    <address class="vcard author">
-      by <a class="url fn" href="http://shanpy.github.io/mathcorner/author/pengyin-shan.html">Pengyin Shan</a>
-    </address>
-  in <a href="http://shanpy.github.io/mathcorner/category/python.html">Python</a>
-<p class="tags">tagged <a href="http://shanpy.github.io/mathcorner/tag/amazon-ec2.html">Amazon EC2</a>, <a href="http://shanpy.github.io/mathcorner/tag/python.html">Python</a></p></div>		
-		<p>[<span class="caps">TOC</span>]</p>
+<div class="container">
+	<div class="page-header">
+		<h1><a href="http://shanpy.github.io/mathcorner/">Pengyin Shan and Math, Finance, Statistics</a>
+			<br><small>Alway Learning. Getting Things Done.</small></h1>	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+<div class="article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="text-center article-header">
+		<h1 itemprop="name headline" class="article-title">Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook</h1>
+		<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<h4 itemprop="name">Pengyin Shan</h4>
+		</span>
+		<time datetime="2015-01-13T00:00:00-05:00" itemprop="datePublished">Tue 13 January 2015</time>
+	</div>
+	<div>
+		Category:
+		<span itemprop="articleSection">
+			<a href="http://shanpy.github.io/mathcorner/category/python.html" rel="category">Python</a>
+		</span>
+	</div>
+ 
+	<div>
+		Tags:
+		<span itemprop="keywords">
+			<a href="http://shanpy.github.io/mathcorner/tag/amazon-ec2.html" rel="tag">Amazon EC2</a>
+		</span>
+		<span itemprop="keywords">
+			<a href="http://shanpy.github.io/mathcorner/tag/python.html" rel="tag">Python</a>
+		</span>
+	</div>
+	<div itemprop="articleBody" class="article-body"><p>[<span class="caps">TOC</span>]</p>
 <p>Recentely I read a great article about <a href="https://gist.github.com/iamatypeofwalrus/5183133">Hosting IPython Notebook on Amazon <span class="caps">AWS</span> Free Tier from Scratch</a>. This tutorial explains the way to host IPython Notebook using a Amazon <span class="caps">EC2</span> Micro&nbsp;Instance. </p>
 <p>I followed this tutorial and successfully hosted an IPython notebook on a Ubuntu 14 Guest <span class="caps">AMI</span>. I want to record some of important steps I took while following this&nbsp;tutorial:</p>
 <p>Note: You can use <strong>nano</strong> to edit <code>ipython_notebook_config.py</code> file. It is located at <code>~/.ipython/profile_nbserver/</code>.</p>
@@ -56,76 +61,86 @@
 <p>Now you just need to type: <code>https://your_elastic_ip:port_number</code> to your IPython&nbsp;Notebook.</p>
 <h2>Make IPython Run as&nbsp;Service</h2>
 <p>You may want you IPython notebook still works after you shutdown your terminal/<span class="caps">SSH</span>. I got solution from this <a href="http://stackoverflow.com/questions/16418477/how-to-keep-server-running-on-ec2-after-ssh-is-terminated">StackOverflow post</a>. I got <strong>screen</strong> by typing <code>sudo apt-get install screen</code>, then do <code>ipython server &amp;</code>. </p>
-<p>If this not work for you, try <code>screen ipython s</code> instead</p>	
+<p>If this not work for you, try <code>screen ipython s</code> instead</p></div>
+	<hr>
+	<h2>Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'Pengyin Shan and Math, Finance, Statistics'; 
+    var disqus_title = 'Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook';
 
-	</article>
-
-    <p>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	</p>
-
-	<div class="comments">
-	<h2>Comments !</h2>
-	    <div id="disqus_thread"></div>
-	    <script type="text/javascript">
-	       var disqus_identifier = "use-amazon-ec2-to-host-ipython-notebook.html";
-	       (function() {
-	       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	       dsq.src = 'http://Pengyin Shan and Math, Finance, Statistics.disqus.com/embed.js';
-	       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	      })();
-	    </script>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+		</div>
+	</div> 	<!-- <hr> -->
+</div> <!-- /container -->
+<footer class="aw-footer bg-danger">
+	<div class="container"> <!-- footer -->
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-md-3">
+						<h4>Navigation</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://shanpy.github.io/mathcorner">Pengyin Shan and Math, Finance, Statistics</a></li>
+							<li><a href="http://shanpy.github.io/mathcorner/feeds/all.atom.xml" type="application/atom+xml"><i class="fa fa-rss "></i> atom</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Author</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="https://www.linkedin.com/in/pengyinshan">Linkedin</a></li>
+							<li><a href="https://github.com/shanpy">Github</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Categories</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://shanpy.github.io/mathcorner/category/Python.html">Python (3)</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<h4>Links</h4>
+						<ul class="list-unstyled my-list-style">
+							<li><a href="http://pengyin-shan.com">Landing Page</a></li>
+							<li><a href="http://pengyin-shan/blogcode">My Technical/Programming Blog</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-		  </div>	
-		  
-		  <div class="sidebar">
-		    <div class="sidebar-container" id="sidebar-container-fixed">
-
-	            <aside>
-	              <h2>About</h2>
-			      <p>
-                    My name is Brian
-			      </p>
-			    </aside>
-
-  	          <nav>
-	            <h2>Categories</h2>
-	            <ul>
-	                <li class="active"><a href="http://shanpy.github.io/mathcorner/category/python.html">Python</a></li>
-	            </ul>
-	          </nav>
-
-	            <aside>
-	            <h2>Social</h2>
-			      <ul class="social">
-				    <li><a href="https://www.linkedin.com/in/pengyinshan">Linkedin</a><i></i></li>
-				    <li><a href="https://github.com/shanpy">Github</a><i></i></li>
-			      </ul>
-			    </aside>
-
-	            <aside>
-	              <h2>Blogroll</h2>
-	              <ul>
-	                  <li><a href="http://pengyin-shan.com">Landing Page</a></li>
-	                  <li><a href="http://pengyin-shan/blogcode">My Technical/Programming Blog</a></li>
-	              </ul>
-	            </aside>
-	        </div>
-		  </div>
-
-	  </div>
-
-      <footer>
-		<p role="contentinfo">
-		  Pengyin Shan - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
-    	</p>
-
-	  </footer>	
-
+</footer>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center center-block aw-bottom">
+			<p>&copy; Pengyin Shan 2014</p>
+			<p>Powered by Pelican</p>
+		</div>
 	</div>
-	
-
+</div>
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$("div.collapseheader").click(function () {
+		$header = $(this).children("span").first();
+		$codearea = $(this).children(".input_area");
+		$codearea.slideToggle(500, function () {
+			$header.text(function () {
+				return $codearea.is(":visible") ? "Collapse Code" : "Expand Code";
+			});
+		});
+	});
+});
+</script>
+<a href="https://github.com/shanpy/mathcorner"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
 </body>
 </html>
