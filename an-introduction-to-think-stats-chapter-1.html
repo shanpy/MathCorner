@@ -5,9 +5,9 @@
       <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="http://shanpy.github.io/mathcorner/use-amazon-ec2-to-host-ipython-notebook.html" />
+    <link rel="canonical" href="http://shanpy.github.io/mathcorner/an-introduction-to-think-stats-chapter-1.html" />
 
-    <title>  Pengyin Shan and Math, Finance, Statistics &mdash; Use Amazon EC2 to Host IPython Notebook
+    <title>  Pengyin Shan and Math, Finance, Statistics &mdash; An Introduction to Think Stats - Chapter 1
 </title>
 
 
@@ -26,8 +26,8 @@
 
 
     <meta name="author" content="Pengyin Shan">
-    <meta name="description" content="This post is trannsferred from my old blog site, about using Amazon EC2 to host IPython Notebook.">
-  <meta name="tags" contents="Amazon EC2, Python, ">
+    <meta name="description" content="This post is one of the reading notes for Think Stats, 2nd Edition, written by Allen B.Downey, published by O’Reilly, on October 2014.">
+  <meta name="tags" contents="Statistics, Data Science, ">
 </head>
 
 <body>
@@ -55,19 +55,19 @@
 </header> <!-- /.header -->  <div class="container">
   <div class="post full-post">
     <h1 class="post-title">
-      <a href="/use-amazon-ec2-to-host-ipython-notebook.html" title="Permalink to Use Amazon EC2 to Host IPython Notebook">Use Amazon <span class="caps">EC2</span> to Host IPython&nbsp;Notebook</a>
+      <a href="/an-introduction-to-think-stats-chapter-1.html" title="Permalink to An Introduction to Think Stats - Chapter 1">An Introduction to Think Stats - Chapter&nbsp;1</a>
     </h1>
     <ul class="list-inline">
       <li class="post-date">
-        <a class="text-muted" href="/use-amazon-ec2-to-host-ipython-notebook.html" title="2015-01-13T00:00:00-05:00">Tue 13 January 2015</a>
+        <a class="text-muted" href="/an-introduction-to-think-stats-chapter-1.html" title="2015-01-13T00:00:00-05:00">Tue 13 January 2015</a>
       </li>
       <li class="muted">&middot;</li>
       <li class="post-category">
-        <a href="http://shanpy.github.io/mathcorner/category/python.html">Python</a>
+        <a href="http://shanpy.github.io/mathcorner/category/data-science.html">Data Science</a>
       </li>
         <li class="muted">&middot;</li>
         <li>
-            <a href="/tag/Amazon EC2.html">Amazon EC2</a>,             <a href="/tag/Python.html">Python</a>        </li>
+            <a href="/tag/Statistics.html">Statistics</a>,             <a href="/tag/Data Science.html">Data Science</a>        </li>
         <li class="muted">&middot;</li>
         <li>
           <address class="post-author">
@@ -76,20 +76,54 @@
         </li>
     </ul>
     <div class="post-content">
-      <p>[<span class="caps">TOC</span>]</p>
-<p>Recentely I read a great article about <a href="https://gist.github.com/iamatypeofwalrus/5183133">Hosting IPython Notebook on Amazon <span class="caps">AWS</span> Free Tier from Scratch</a>. This tutorial explains the way to host IPython Notebook using a Amazon <span class="caps">EC2</span> Micro&nbsp;Instance. </p>
-<p>I followed this tutorial and successfully hosted an IPython notebook on a Ubuntu 14 Guest <span class="caps">AMI</span>. I want to record some of important steps I took while following this&nbsp;tutorial:</p>
-<p>Note: You can use <strong>nano</strong> to edit <code>ipython_notebook_config.py</code> file. It is located at <code>~/.ipython/profile_nbserver/</code>.</p>
-<h2>Security&nbsp;Group</h2>
-<p>When you set up rules for <em>Security Groups</em>, make sure you include <code>SSH</code>, <code>HTTPS</code> and <code>8888</code> all of these. Lack of one can make your IPython Notebook fail. If you forget to do so when you set up the machine, you can set up later in your <span class="caps">EC2</span> management&nbsp;console.</p>
-<h2>Elastic&nbsp;Ip</h2>
-<p>The tutorial suggest you link an <strong>Elastic <span class="caps">IP</span></strong> to your instance so that everytime you try to access your instance in browser, you can type new ip address instead of long public <span class="caps">DNS</span>. </p>
-<p>To do this, click <strong>Elastic IPs</strong> option in you <span class="caps">EC2</span> Dashboard menu, which is in <strong><span class="caps">NETWORK</span> <span class="amp">&amp;</span> <span class="caps">SECURITY</span></strong> section. On right panel, click <strong>Allocate New Address</strong> button. Then click <strong>Yes</strong> in the pop-up&nbsp;window. </p>
-<p>Now a <span class="caps">IP</span> address should be generated. Rememeber to <em>associate</em> your instance with this <span class="caps">IP</span> address. Select this <span class="caps">IP</span> address, then click <strong>Associate Address</strong> button. A pop-up window will appear. Click <strong>Instance</strong> then select your instance in drop-dowm menu. You can also do other setting here. Click <strong>Associate</strong> to associate your instance to this <span class="caps">IP</span>. </p>
-<p>Now you just need to type: <code>https://your_elastic_ip:port_number</code> to your IPython&nbsp;Notebook.</p>
-<h2>Make IPython Run as&nbsp;Service</h2>
-<p>You may want you IPython notebook still works after you shutdown your terminal/<span class="caps">SSH</span>. I got solution from this <a href="http://stackoverflow.com/questions/16418477/how-to-keep-server-running-on-ec2-after-ssh-is-terminated">StackOverflow post</a>. I got <strong>screen</strong> by typing <code>sudo apt-get install screen</code>, then do <code>ipython server &amp;</code>. </p>
-<p>If this not work for you, try <code>screen ipython s</code> instead</p>
+      <h1>Chapter 1: Exploratory Data&nbsp;Analysis</h1>
+<p><strong>Anecdotal Evidence</strong> is the evidence based on the data that is unpublished and usually personal, rather than by a well-designed&nbsp;study.</p>
+<p>Anecdotal Evidence usually fails because of four&nbsp;reasons:</p>
+<ul>
+<li>
+<p>Small Number of&nbsp;Observations</p>
+</li>
+<li>
+<p>Selection Bias: people who discuss the question may be interested in one aspects of the&nbsp;answer</p>
+</li>
+<li>
+<p>Confirmation Bias: people who belive the claim might be more likely to contribute examples that confirm&nbsp;it</p>
+</li>
+<li>
+<p>Inaccuracy: Anecdotes are ofter personal, so there exists misremembered, misrepeated,&nbsp;etc.</p>
+</li>
+</ul>
+<p>To avoid Anecdotal Evidence, a few <strong>tools of statistics</strong> can be&nbsp;used:</p>
+<ul>
+<li>
+<p>Data Collection: large and trustable data&nbsp;source</p>
+</li>
+<li>
+<p>Descriptive Statistics: statistics that summarize data concisely, maybe with data&nbsp;virtualization</p>
+</li>
+<li>
+<p>Exploratory Data Analysis: patterns, differnces and other features that address the question. Inconsistency and Identify&nbsp;limitations.</p>
+</li>
+<li>
+<p>Estimation: use data from sample to estimate&nbsp;characteristics</p>
+</li>
+<li>
+<p>Hypothesis Testing: if there is any apparent effects, such as a difference between two groups, evaluate if this effect happening by&nbsp;chance.</p>
+</li>
+</ul>
+<p><strong>Population</strong>: a group we are interested in&nbsp;studying.</p>
+<p><strong>Cross-Sectional Study</strong>: captures a snapshot of a group at a point in time. It is <strong>representative</strong>, which means every number of the target population has an equal change of participating. <strong>Oversampled</strong> is opposite to representative. It means some groups of population has much higher rate in all sample groups. Oversampling is used to avoid errors due to small sample&nbsp;sizes.</p>
+<p><strong>Longitudinal Study</strong>: observes a group repeatedly over a period of&nbsp;time.</p>
+<p><strong>Cycle</strong>: a survey can be conducted several times. Each deployment is called a&nbsp;cycle.</p>
+<p><strong>Sample</strong>: data from a subset of&nbsp;population</p>
+<p><strong>Record</strong>: In a dataset, a collection of information about a single person or other&nbsp;subject.</p>
+<p><strong>Respondents</strong>: people who participate in the&nbsp;survey</p>
+<p><strong>DataFrame</strong>: the fundamental data structure provided by <strong>pandas</strong>. It contains a row of each record, and the variable names and their types. It also provides methods of accessing and modifying&nbsp;data.</p>
+<p><strong>Raw Data</strong>: values collected with little or no checking, calculation or&nbsp;interpretation.</p>
+<p><strong>Recodes</strong>: instead of being part of raw data, recodes are calculated by raw data. Recodes are often based on logic that checks the consistency and accuracy of the&nbsp;data.</p>
+<p><strong>Data Cleaning</strong>: operations such as check for errors, deal with sepecial values, convert data into different formats and perform calculations after you import&nbsp;data.</p>
+<p><strong>Data Validation</strong>: one way to validate data is to compute basic statistics and compare them with published&nbsp;results</p>
+<p><strong>Data Interpretation</strong>: To work with data effectively, you have to think on two levels at the same time: the level of <strong>statistics</strong> and the level of <strong>context</strong>. Some result is statistically acceptable but not natual in&nbsp;context.</p>
     </div>
   </div>
   <hr class="separator">
