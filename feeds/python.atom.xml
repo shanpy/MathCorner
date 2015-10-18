@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Pengyin Shan and Math, Finance, Statistics</title><link href="http://shanpy.github.io/mathcorner/" rel="alternate"></link><link href="http://shanpy.github.io/mathcorner/feeds/python.atom.xml" rel="self"></link><id>http://shanpy.github.io/mathcorner/</id><updated>2015-05-30T00:00:00-04:00</updated><entry><title>How to Build A Basic Nikola Blog and Deploy to Github Page</title><link href="http://shanpy.github.io/mathcorner/how-to-build-a-basic-nikola-blog-and-deloy-to-github-page.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/how-to-build-a-basic-nikola-blog-and-deloy-to-github-page.html</id><summary type="html">
-&lt;p&gt;One of my goal for 2015 is to learn Python. To prepare for this, I decided to create a new blog site, based on Python. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pengyin Shan and Math, Finance, Statistics</title><link href="http://shanpy.github.io/mathcorner/" rel="alternate"></link><link href="http://shanpy.github.io/mathcorner/feeds/python.atom.xml" rel="self"></link><id>http://shanpy.github.io/mathcorner/</id><updated>2015-05-30T00:00:00-04:00</updated><entry><title>How to Build A Basic Nikola Blog and Deploy to Github Page</title><link href="http://shanpy.github.io/mathcorner/how-to-build-a-basic-nikola-blog-and-deloy-to-github-page.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/how-to-build-a-basic-nikola-blog-and-deloy-to-github-page.html</id><summary type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;/p&gt;
+&lt;p&gt;One of my goal for 2015 is to learn Python. To prepare for this, I decided to create a new blog site, based on&amp;nbsp;Python. &lt;/p&gt;
 &lt;p&gt;After doing some research, I decide to use &lt;a href="http://getnikola.com/"&gt;&lt;strong&gt;Nikola&lt;/strong&gt;&lt;/a&gt; to build my blog. One of the reason I choose Nikola is that it has great support to &lt;strong&gt;IPython Notebook&lt;/strong&gt;.&lt;/p&gt;
-&lt;h4 id="lots-of-thanks-to-damian-avila-your-blog-is-so-useful-and-great-for-nikola-beginners-like-me"&gt;Lots of Thanks to &lt;a href="http://www.damian.oquanta.info/"&gt;Damian Avila&lt;/a&gt;! Your blog is so useful and great for Nikola beginners like me!&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1. Create Virtual Environment&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Before you install Nikola, a good practice is to build a virual environment. You can install &lt;strong&gt;Virtualenv&lt;/strong&gt; and use it. Since I had &lt;strong&gt;Anaconda&lt;/strong&gt; installed, I just type &lt;code&gt;conda create -n techblog python=3.4 anaconda&lt;/code&gt; to create a virtual environment called “techblog” with python 3.4. You can define your own name and python version.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2. Install Nikola and Necessary Component&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;Lots of Thanks to &lt;a href="http://www.damian.oquanta.info/"&gt;Damian Avila&lt;/a&gt;! Your blog is so useful and great for Nikola beginners like&amp;nbsp;me!&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. Create Virtual&amp;nbsp;Environment&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before you install Nikola, a good practice is to build a virual environment. You can install &lt;strong&gt;Virtualenv&lt;/strong&gt; and use it. Since I had &lt;strong&gt;Anaconda&lt;/strong&gt; installed, I just type &lt;code&gt;conda create -n techblog python=3.4 anaconda&lt;/code&gt; to create a virtual environment called &amp;#8220;techblog&amp;#8221; with python 3.4. You can define your own name and python&amp;nbsp;version.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Install Nikola and Necessary&amp;nbsp;Component&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;First, make sure you use your virtual enviorment. command is:&lt;/em&gt; &lt;code&gt;source activate name_of_environment&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;I suggest you to use &lt;strong&gt;pip&lt;/strong&gt; to install followiing components:
 - nikola
@@ -16,122 +16,122 @@
 - jinja2
 - webassets (if you want to use USE_BUNDLES)
 - markdown (if you want to use markdown)
-- ipython (if you want to use ipython notebook)&lt;/p&gt;
+- ipython (if you want to use ipython&amp;nbsp;notebook)&lt;/p&gt;
 &lt;p&gt;For example, you type follwing command in your terminal: &lt;code&gt;pip install nikola requests sphinx markdown ipython pyzmq tornado jinja2 webasset&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;In the next following steps, make sure you are under your virtual environment.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. Initialize Nikola&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Type &lt;code&gt;nikola init&lt;/code&gt; in your terminal, where you want to build your site in a &lt;em&gt;subfolder&lt;/em&gt; of current location.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In the next following steps, make sure you are under your virtual&amp;nbsp;environment.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Initialize&amp;nbsp;Nikola&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Type &lt;code&gt;nikola init&lt;/code&gt; in your terminal, where you want to build your site in a &lt;em&gt;subfolder&lt;/em&gt; of current&amp;nbsp;location.&lt;/p&gt;
 &lt;p&gt;You will be asked following questions:
 - Destination: Name of the folder your site will be
 - Site Title
 - Site Author
-- Author’s Email
+- Author&amp;#8217;s Email
 - Site Description
 - Site &lt;span class="caps"&gt;URL&lt;/span&gt;: This is the url that when you click header of your site, the page will jump to. You can set this later in &lt;strong&gt;conf.py&lt;/strong&gt; file. If you type one, make sure it ends with a &lt;em&gt;/&lt;/em&gt;.
 - Default Language: I use &lt;strong&gt;en&lt;/strong&gt; but you can refer Nikola website for more option.
 - Time Zone: Short name for your time zone. I use &lt;strong&gt;&lt;span class="caps"&gt;EST&lt;/span&gt;&lt;/strong&gt;. For example.
-- Comment System: Nikola support popular comment system such as &lt;em&gt;Disqus&lt;/em&gt;, &lt;em&gt;Google+&lt;/em&gt; and &lt;em&gt;Facebook&lt;/em&gt;. You will be asked to enter &lt;em&gt;comment system site identifier&lt;/em&gt; if required. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4. Change Theme (Optional)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you want to change theme of your website, You can find a list of themes from &lt;a href="http://themes.getnikola.com/"&gt;Nikiola Website&lt;/a&gt;. Note any theme that has &lt;em&gt;ipython&lt;/em&gt; in its name supports IPython Notebook. &lt;/p&gt;
-&lt;p&gt;Then, do &lt;code&gt;cd your_folder&lt;/code&gt; to get to the folder that Nikola just created for you. &lt;/p&gt;
-&lt;p&gt;Type &lt;code&gt;nikola install_theme name_of_theme&lt;/code&gt; to install theme.  &lt;/p&gt;
-&lt;p&gt;You may need to change some setting in &lt;strong&gt;conf.py&lt;/strong&gt; file, so read instructions in your terminal carefully.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;5. Configure and Build Site&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;First, open &lt;strong&gt;conf.py&lt;/strong&gt; file and configure it as your requests:&lt;/p&gt;
+- Comment System: Nikola support popular comment system such as &lt;em&gt;Disqus&lt;/em&gt;, &lt;em&gt;Google+&lt;/em&gt; and &lt;em&gt;Facebook&lt;/em&gt;. You will be asked to enter &lt;em&gt;comment system site identifier&lt;/em&gt; if&amp;nbsp;required. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Change Theme&amp;nbsp;(Optional)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you want to change theme of your website, You can find a list of themes from &lt;a href="http://themes.getnikola.com/"&gt;Nikiola Website&lt;/a&gt;. Note any theme that has &lt;em&gt;ipython&lt;/em&gt; in its name supports IPython&amp;nbsp;Notebook. &lt;/p&gt;
+&lt;p&gt;Then, do &lt;code&gt;cd your_folder&lt;/code&gt; to get to the folder that Nikola just created for&amp;nbsp;you. &lt;/p&gt;
+&lt;p&gt;Type &lt;code&gt;nikola install_theme name_of_theme&lt;/code&gt; to install&amp;nbsp;theme.  &lt;/p&gt;
+&lt;p&gt;You may need to change some setting in &lt;strong&gt;conf.py&lt;/strong&gt; file, so read instructions in your terminal&amp;nbsp;carefully.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Configure and Build&amp;nbsp;Site&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;First, open &lt;strong&gt;conf.py&lt;/strong&gt; file and configure it as your&amp;nbsp;requests:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;If you didn’t do some setup in step 3 in terminal, you can found them here. For example, you can re-edit &lt;strong&gt;SITE_URL&lt;/strong&gt; if you haven’t done so.&lt;/p&gt;
+&lt;p&gt;If you didn&amp;#8217;t do some setup in step 3 in terminal, you can found them here. For example, you can re-edit &lt;strong&gt;SITE_URL&lt;/strong&gt; if you haven&amp;#8217;t done&amp;nbsp;so.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If you have installed new theme and want to change to it, change &lt;strong&gt;&lt;span class="caps"&gt;THEME&lt;/span&gt;=&lt;/strong&gt; option to your installed theme. Some theme may also want you to change &lt;strong&gt;NAVIGATION_LINKS&lt;/strong&gt; or other settings.&lt;/p&gt;
+&lt;p&gt;If you have installed new theme and want to change to it, change &lt;strong&gt;&lt;span class="caps"&gt;THEME&lt;/span&gt;=&lt;/strong&gt; option to your installed theme. Some theme may also want you to change &lt;strong&gt;NAVIGATION_LINKS&lt;/strong&gt; or other&amp;nbsp;settings.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If you want to use IPython Notebook or Markdown, find &lt;strong&gt;&lt;span class="caps"&gt;POSTS&lt;/span&gt; =&lt;/strong&gt; option and add &lt;code&gt;("posts/*.md", "posts", "post.tmpl"),("posts/*.ipynb", "posts", "post.tmpl"),&lt;/code&gt;. &lt;em&gt;If you don’t need lots of new pages, I suggest you not change &lt;span class="caps"&gt;PAGES&lt;/span&gt; setting.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you want to use IPython Notebook or Markdown, find &lt;strong&gt;&lt;span class="caps"&gt;POSTS&lt;/span&gt; =&lt;/strong&gt; option and add &lt;code&gt;("posts/*.md", "posts", "post.tmpl"),("posts/*.ipynb", "posts", "post.tmpl"),&lt;/code&gt;. &lt;em&gt;If you don&amp;#8217;t need lots of new pages, I suggest you not change &lt;span class="caps"&gt;PAGES&lt;/span&gt;&amp;nbsp;setting.&lt;/em&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Set &lt;strong&gt;INDEX_TEASERS = &lt;/strong&gt; to &lt;strong&gt;True&lt;/strong&gt; to enable teaser. Now you can just put &lt;code&gt;.. TEASER_END&lt;/code&gt; or &lt;code&gt;&amp;lt;!--TEASER_END--&amp;gt;&lt;/code&gt; in your post to make index page only show first part of your post&lt;/p&gt;
+&lt;p&gt;Set &lt;strong&gt;INDEX_TEASERS = &lt;/strong&gt; to &lt;strong&gt;True&lt;/strong&gt; to enable teaser. Now you can just put &lt;code&gt;.. TEASER_END&lt;/code&gt; or &lt;code&gt;&amp;lt;!--TEASER_END--&amp;gt;&lt;/code&gt; in your post to make index page only show first part of your&amp;nbsp;post&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If you have installed &lt;strong&gt;webassets&lt;/strong&gt;, you can set &lt;strong&gt;USE_BUNDLES=&lt;/strong&gt; to &lt;strong&gt;True&lt;/strong&gt; to speed up your site.&lt;/p&gt;
+&lt;p&gt;If you have installed &lt;strong&gt;webassets&lt;/strong&gt;, you can set &lt;strong&gt;USE_BUNDLES=&lt;/strong&gt; to &lt;strong&gt;True&lt;/strong&gt; to speed up your&amp;nbsp;site.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I skip the process of creating new post. Note if you create a IPython Notebook post, you can edit information such as slugs, dates, tags in &lt;strong&gt;.meta&lt;/strong&gt; file, which is automatically generated with &lt;strong&gt;.ipynb&lt;/strong&gt; file.&lt;/p&gt;
+&lt;p&gt;I skip the process of creating new post. Note if you create a IPython Notebook post, you can edit information such as slugs, dates, tags in &lt;strong&gt;.meta&lt;/strong&gt; file, which is automatically generated with &lt;strong&gt;.ipynb&lt;/strong&gt;&amp;nbsp;file.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Now you can type &lt;code&gt;nikola build&lt;/code&gt; to build your site. A list of rendered file will appear. &lt;/p&gt;
+&lt;p&gt;Now you can type &lt;code&gt;nikola build&lt;/code&gt; to build your site. A list of rendered file will&amp;nbsp;appear. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;What user can see from your website is in &lt;strong&gt;output&lt;/strong&gt; folder. &lt;/p&gt;
+&lt;p&gt;What user can see from your website is in &lt;strong&gt;output&lt;/strong&gt;&amp;nbsp;folder. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;If you have any external file, such as &lt;strong&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;span class="caps"&gt;IMAGE&lt;/span&gt;&lt;/strong&gt;, you can put it in &lt;strong&gt;files&lt;/strong&gt; folder. &lt;/p&gt;
+&lt;p&gt;If you have any external file, such as &lt;strong&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;span class="caps"&gt;IMAGE&lt;/span&gt;&lt;/strong&gt;, you can put it in &lt;strong&gt;files&lt;/strong&gt;&amp;nbsp;folder. &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;After building, you can type &lt;code&gt;nikola serve&lt;/code&gt; to host your site locally. By default, you site can be open from &lt;code&gt;http://localhost:8000/&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;6. Deploy Site to Github Pages&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I find great help from &lt;a href="http://www.damian.oquanta.info/posts/one-line-deployment-of-your-site-to-gh-pages.html"&gt;solution of Damian’s blog&lt;/a&gt;. I used his method to deploy this site to one of my Github page.&lt;/p&gt;
-&lt;p&gt;Please make sure you do follwing steps except git initiate every time you want to make change:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. Deploy Site to Github&amp;nbsp;Pages&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I find great help from &lt;a href="http://www.damian.oquanta.info/posts/one-line-deployment-of-your-site-to-gh-pages.html"&gt;solution of Damian&amp;#8217;s blog&lt;/a&gt;. I used his method to deploy this site to one of my Github&amp;nbsp;page.&lt;/p&gt;
+&lt;p&gt;Please make sure you do follwing steps except git initiate every time you want to make&amp;nbsp;change:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;First, create a repository. You can use default “user.github.io” repo, but since I prefer a &lt;strong&gt;project Github Page&lt;/strong&gt;, so I create a repo called “techblog”.&lt;/p&gt;
+&lt;p&gt;First, create a repository. You can use default &amp;#8220;user.github.io&amp;#8221; repo, but since I prefer a &lt;strong&gt;project Github Page&lt;/strong&gt;, so I create a repo called&amp;nbsp;&amp;#8220;techblog&amp;#8221;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;After installed &lt;strong&gt;Git&lt;/strong&gt; to your machine, &lt;code&gt;cd&lt;/code&gt; to your site folder, then type &lt;code&gt;git init&lt;/code&gt; to initiate.&lt;/p&gt;
+&lt;p&gt;After installed &lt;strong&gt;Git&lt;/strong&gt; to your machine, &lt;code&gt;cd&lt;/code&gt; to your site folder, then type &lt;code&gt;git init&lt;/code&gt; to&amp;nbsp;initiate.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Do &lt;code&gt;git remote add origin https://github.com/your_user_name/your_repo.git&lt;/code&gt; to add repo, with a name &lt;em&gt;origin&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Push all of your content to &lt;strong&gt;master&lt;/strong&gt; branch first&lt;/p&gt;
+&lt;p&gt;Push all of your content to &lt;strong&gt;master&lt;/strong&gt; branch&amp;nbsp;first&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git checkout -b gh-pages&lt;/code&gt; to create and swich to gh-pages. You can skip &lt;code&gt;-b&lt;/code&gt; after you do this once.&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git checkout -b gh-pages&lt;/code&gt; to create and swich to gh-pages. You can skip &lt;code&gt;-b&lt;/code&gt; after you do this&amp;nbsp;once.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Do &lt;code&gt;git rm -rf .&lt;/code&gt; &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git commit -am "Your Commit"&lt;/code&gt; to commit for gh-pages&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git commit -am "Your Commit"&lt;/code&gt; to commit for&amp;nbsp;gh-pages&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Do &lt;code&gt;git push origin gh-pages&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git checkout master&lt;/code&gt; to switch back to master branch&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git checkout master&lt;/code&gt; to switch back to master&amp;nbsp;branch&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git branch -D gh-pages&lt;/code&gt; first to avoid commit error. (I tried to skip this step before but I got a git commit error, so I suggest you do this step first)&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git branch -D gh-pages&lt;/code&gt; first to avoid commit error. (I tried to skip this step before but I got a git commit error, so I suggest you do this step&amp;nbsp;first)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git subtree split --prefix output -b gh-pages&lt;/code&gt; to only transfer content in &lt;strong&gt;output&lt;/strong&gt; folder from master to gh-pages&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git subtree split --prefix output -b gh-pages&lt;/code&gt; to only transfer content in &lt;strong&gt;output&lt;/strong&gt; folder from master to&amp;nbsp;gh-pages&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git push -f origin gh-pages:gh-pages&lt;/code&gt; to force push&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git push -f origin gh-pages:gh-pages&lt;/code&gt; to force&amp;nbsp;push&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Do &lt;code&gt;git branch -D gh-pages&lt;/code&gt; again to delete local gh-pages branch&lt;/p&gt;
+&lt;p&gt;Do &lt;code&gt;git branch -D gh-pages&lt;/code&gt; again to delete local gh-pages&amp;nbsp;branch&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;7. Add Custom Domain to Your Github Page (Optional)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;You may want to add custom domain to your Github page. Github has a tutorial &lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/"&gt;here&lt;/a&gt;. Since I’m hosting my domain (pengyin-shan.com) on GoDaddy, I followed instructions &lt;a href="http://captainwhippet.com/blog/2014/05/11/blog-setup-details.html"&gt;in this blog&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;A few things I want to mention:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. Add Custom Domain to Your Github Page&amp;nbsp;(Optional)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You may want to add custom domain to your Github page. Github has a tutorial &lt;a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/"&gt;here&lt;/a&gt;. Since I&amp;#8217;m hosting my domain (pengyin-shan.com) on GoDaddy, I followed instructions &lt;a href="http://captainwhippet.com/blog/2014/05/11/blog-setup-details.html"&gt;in this blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A few things I want to&amp;nbsp;mention:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/strong&gt; file should be put to your &lt;strong&gt;files&lt;/strong&gt; folder so that when you following steps above to push to Github, this file will show in gh-pages branch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/strong&gt; file should be put to your &lt;strong&gt;files&lt;/strong&gt; folder so that when you following steps above to push to Github, this file will show in gh-pages&amp;nbsp;branch.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The content of &lt;strong&gt;&lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/strong&gt; file should be bare subdomain of your custom domain, which means you &lt;em&gt;can not&lt;/em&gt; use &lt;code&gt;http://test.com&lt;/code&gt; or &lt;code&gt;http:test.com/blog&lt;/code&gt;. You can only have one custdom domain.&lt;/p&gt;
+&lt;p&gt;The content of &lt;strong&gt;&lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/strong&gt; file should be bare subdomain of your custom domain, which means you &lt;em&gt;can not&lt;/em&gt; use &lt;code&gt;http://test.com&lt;/code&gt; or &lt;code&gt;http:test.com/blog&lt;/code&gt;. You can only have one custdom&amp;nbsp;domain.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;I think based on Github’s role, even though you are hosting project Github pages, your custom domain has to be “test.com” instead of “test.com/name_of_repo”&lt;/p&gt;
+&lt;p&gt;I think based on Github&amp;#8217;s role, even though you are hosting project Github pages, your custom domain has to be &amp;#8220;test.com&amp;#8221; instead of&amp;nbsp;&amp;#8220;test.com/name_of_repo&amp;#8221;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;On Jan 1st, 2015, the &lt;span class="caps"&gt;IP&lt;/span&gt; address of &lt;strong&gt;Github Project Page&lt;/strong&gt; are &lt;code&gt;192.30.252.153&lt;/code&gt; and &lt;code&gt;192.30.152.154&lt;/code&gt;. If you have A (Host), make sure your &lt;code&gt;@&lt;/code&gt; is pointing to these two IPs.&lt;/p&gt;
+&lt;p&gt;On Jan 1st, 2015, the &lt;span class="caps"&gt;IP&lt;/span&gt; address of &lt;strong&gt;Github Project Page&lt;/strong&gt; are &lt;code&gt;192.30.252.153&lt;/code&gt; and &lt;code&gt;192.30.152.154&lt;/code&gt;. If you have A (Host), make sure your &lt;code&gt;@&lt;/code&gt; is pointing to these two&amp;nbsp;IPs.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you finish these settings, you should be able to host your Nikola blog on Github Page. Please feel free to let me know if you have any comments.&lt;/p&gt;</summary><category term="Python"></category><category term="Nikola"></category><category term="Github"></category></entry><entry><title>Python Basics</title><link href="http://shanpy.github.io/mathcorner/python-basics.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/python-basics.html</id><summary type="html">&lt;p&gt;This post is transferred from my &lt;a href="blogpengyin.herokuapp.com"&gt;old blog site&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;If you finish these settings, you should be able to host your Nikola blog on Github Page. Please feel free to let me know if you have any&amp;nbsp;comments.&lt;/p&gt;</summary><category term="Python"></category><category term="Nikola"></category><category term="Github"></category></entry><entry><title>Python Basics</title><link href="http://shanpy.github.io/mathcorner/python-basics.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/python-basics.html</id><summary type="html">&lt;p&gt;This post is transferred from my &lt;a href="blogpengyin.herokuapp.com"&gt;old blog site&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;This is a reading note for Appendix in the book of &lt;strong&gt;Python for Data Analysis&lt;/strong&gt;, published by &lt;em&gt;O&amp;#8217;Reilly, 2012&lt;/em&gt;. The appendix of this book describes python basic syntax and information, which I think is very useful for python beginners like&amp;nbsp;me.&lt;/p&gt;
-&lt;h2 id="basic-information"&gt;Basic&amp;nbsp;Information&lt;/h2&gt;
+&lt;h2&gt;Basic&amp;nbsp;Information&lt;/h2&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -609,7 +609,7 @@ True
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/p&gt;
-&lt;h2 id="list"&gt;List&lt;/h2&gt;
+&lt;h2&gt;List&lt;/h2&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -980,7 +980,7 @@ None
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/p&gt;
-&lt;h2 id="tuple"&gt;Tuple&lt;/h2&gt;
+&lt;h2&gt;Tuple&lt;/h2&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -1387,7 +1387,7 @@ None
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/p&gt;
-&lt;h2 id="dictionary-and-set"&gt;Dictionary and&amp;nbsp;Set&lt;/h2&gt;
+&lt;h2&gt;Dictionary and&amp;nbsp;Set&lt;/h2&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -1889,7 +1889,7 @@ False
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/p&gt;
-&lt;h2 id="function"&gt;Function&lt;/h2&gt;
+&lt;h2&gt;Function&lt;/h2&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -2209,7 +2209,7 @@ set([(1, 2), (2, (1, 2)), (0, &amp;apos;a&amp;apos;)])
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;h2 id="ipython-basics"&gt;IPython&amp;nbsp;Basics&lt;/h2&gt;
+&lt;h2&gt;IPython&amp;nbsp;Basics&lt;/h2&gt;
 &lt;p&gt;In IPython, &lt;code&gt;print&lt;/code&gt; is used to print more &lt;em&gt;readable&lt;/em&gt;&amp;nbsp;result.&lt;/p&gt;
 &lt;p&gt;Same as what&amp;#8217;s happening in terminal, &lt;code&gt;&amp;lt;tab&amp;gt;&lt;/code&gt; button in IPython can do &lt;em&gt;auto-complete&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;object introspection&lt;/code&gt;: &lt;code&gt;?variable_name&lt;/code&gt; in IPython can provide information about this variable:
@@ -2217,17 +2217,17 @@ set([(1, 2), (2, (1, 2)), (0, &amp;apos;a&amp;apos;)])
 &lt;p&gt;&lt;code&gt;function_name??&lt;/code&gt; will show this function&amp;#8217;s source code if&amp;nbsp;exists.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;*name*&lt;/code&gt; is &lt;em&gt;wildcard&lt;/em&gt; operation. It can list result that is combined by &amp;#8216;XXnameX&amp;#8217; or&amp;nbsp;&amp;#8216;nameXXX&amp;#8217;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;%paste&lt;/code&gt; and &lt;code&gt;%cpaste&lt;/code&gt; can takes code on clipboard then execute it in a single block in the&amp;nbsp;shell&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;magic command&lt;/em&gt;: It is prefixed by the percentage symbol &lt;code&gt;%&lt;/code&gt;&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>Use Amazon EC2 to Host IPython Notebook</title><link href="http://shanpy.github.io/mathcorner/use-amazon-ec2-to-host-ipython-notebook.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/use-amazon-ec2-to-host-ipython-notebook.html</id><summary type="html">
-&lt;p&gt;Recentely I read a great article about &lt;a href="https://gist.github.com/iamatypeofwalrus/5183133"&gt;Hosting IPython Notebook on Amazon &lt;span class="caps"&gt;AWS&lt;/span&gt; Free Tier from Scratch&lt;/a&gt;. This tutorial explains the way to host IPython Notebook using a Amazon &lt;span class="caps"&gt;EC2&lt;/span&gt; Micro Instance. &lt;/p&gt;
-&lt;p&gt;I followed this tutorial and successfully hosted an IPython notebook on a Ubuntu 14 Guest &lt;span class="caps"&gt;AMI&lt;/span&gt;. I want to record some of important steps I took while following this tutorial:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;magic command&lt;/em&gt;: It is prefixed by the percentage symbol &lt;code&gt;%&lt;/code&gt;&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>Use Amazon EC2 to Host IPython Notebook</title><link href="http://shanpy.github.io/mathcorner/use-amazon-ec2-to-host-ipython-notebook.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/use-amazon-ec2-to-host-ipython-notebook.html</id><summary type="html">&lt;p&gt;[&lt;span class="caps"&gt;TOC&lt;/span&gt;]&lt;/p&gt;
+&lt;p&gt;Recentely I read a great article about &lt;a href="https://gist.github.com/iamatypeofwalrus/5183133"&gt;Hosting IPython Notebook on Amazon &lt;span class="caps"&gt;AWS&lt;/span&gt; Free Tier from Scratch&lt;/a&gt;. This tutorial explains the way to host IPython Notebook using a Amazon &lt;span class="caps"&gt;EC2&lt;/span&gt; Micro&amp;nbsp;Instance. &lt;/p&gt;
+&lt;p&gt;I followed this tutorial and successfully hosted an IPython notebook on a Ubuntu 14 Guest &lt;span class="caps"&gt;AMI&lt;/span&gt;. I want to record some of important steps I took while following this&amp;nbsp;tutorial:&lt;/p&gt;
 &lt;p&gt;Note: You can use &lt;strong&gt;nano&lt;/strong&gt; to edit &lt;code&gt;ipython_notebook_config.py&lt;/code&gt; file. It is located at &lt;code&gt;~/.ipython/profile_nbserver/&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="security-group"&gt;Security Group&lt;/h2&gt;
-&lt;p&gt;When you set up rules for &lt;em&gt;Security Groups&lt;/em&gt;, make sure you include &lt;code&gt;SSH&lt;/code&gt;, &lt;code&gt;HTTPS&lt;/code&gt; and &lt;code&gt;8888&lt;/code&gt; all of these. Lack of one can make your IPython Notebook fail. If you forget to do so when you set up the machine, you can set up later in your &lt;span class="caps"&gt;EC2&lt;/span&gt; management console.&lt;/p&gt;
-&lt;h2 id="elastic-ip"&gt;Elastic Ip&lt;/h2&gt;
+&lt;h2&gt;Security&amp;nbsp;Group&lt;/h2&gt;
+&lt;p&gt;When you set up rules for &lt;em&gt;Security Groups&lt;/em&gt;, make sure you include &lt;code&gt;SSH&lt;/code&gt;, &lt;code&gt;HTTPS&lt;/code&gt; and &lt;code&gt;8888&lt;/code&gt; all of these. Lack of one can make your IPython Notebook fail. If you forget to do so when you set up the machine, you can set up later in your &lt;span class="caps"&gt;EC2&lt;/span&gt; management&amp;nbsp;console.&lt;/p&gt;
+&lt;h2&gt;Elastic&amp;nbsp;Ip&lt;/h2&gt;
 &lt;p&gt;The tutorial suggest you link an &lt;strong&gt;Elastic &lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/strong&gt; to your instance so that everytime you try to access your instance in browser, you can type new ip address instead of long public &lt;span class="caps"&gt;DNS&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;To do this, click &lt;strong&gt;Elastic IPs&lt;/strong&gt; option in you &lt;span class="caps"&gt;EC2&lt;/span&gt; Dashboard menu, which is in &lt;strong&gt;&lt;span class="caps"&gt;NETWORK&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;SECURITY&lt;/span&gt;&lt;/strong&gt; section. On right panel, click &lt;strong&gt;Allocate New Address&lt;/strong&gt; button. Then click &lt;strong&gt;Yes&lt;/strong&gt; in the pop-up window. &lt;/p&gt;
+&lt;p&gt;To do this, click &lt;strong&gt;Elastic IPs&lt;/strong&gt; option in you &lt;span class="caps"&gt;EC2&lt;/span&gt; Dashboard menu, which is in &lt;strong&gt;&lt;span class="caps"&gt;NETWORK&lt;/span&gt; &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; &lt;span class="caps"&gt;SECURITY&lt;/span&gt;&lt;/strong&gt; section. On right panel, click &lt;strong&gt;Allocate New Address&lt;/strong&gt; button. Then click &lt;strong&gt;Yes&lt;/strong&gt; in the pop-up&amp;nbsp;window. &lt;/p&gt;
 &lt;p&gt;Now a &lt;span class="caps"&gt;IP&lt;/span&gt; address should be generated. Rememeber to &lt;em&gt;associate&lt;/em&gt; your instance with this &lt;span class="caps"&gt;IP&lt;/span&gt; address. Select this &lt;span class="caps"&gt;IP&lt;/span&gt; address, then click &lt;strong&gt;Associate Address&lt;/strong&gt; button. A pop-up window will appear. Click &lt;strong&gt;Instance&lt;/strong&gt; then select your instance in drop-dowm menu. You can also do other setting here. Click &lt;strong&gt;Associate&lt;/strong&gt; to associate your instance to this &lt;span class="caps"&gt;IP&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;Now you just need to type: &lt;code&gt;https://your_elastic_ip:port_number&lt;/code&gt; to your IPython Notebook.&lt;/p&gt;
-&lt;h2 id="make-ipython-run-as-service"&gt;Make IPython Run as Service&lt;/h2&gt;
+&lt;p&gt;Now you just need to type: &lt;code&gt;https://your_elastic_ip:port_number&lt;/code&gt; to your IPython&amp;nbsp;Notebook.&lt;/p&gt;
+&lt;h2&gt;Make IPython Run as&amp;nbsp;Service&lt;/h2&gt;
 &lt;p&gt;You may want you IPython notebook still works after you shutdown your terminal/&lt;span class="caps"&gt;SSH&lt;/span&gt;. I got solution from this &lt;a href="http://stackoverflow.com/questions/16418477/how-to-keep-server-running-on-ec2-after-ssh-is-terminated"&gt;StackOverflow post&lt;/a&gt;. I got &lt;strong&gt;screen&lt;/strong&gt; by typing &lt;code&gt;sudo apt-get install screen&lt;/code&gt;, then do &lt;code&gt;ipython server &amp;amp;&lt;/code&gt;. &lt;/p&gt;
 &lt;p&gt;If this not work for you, try &lt;code&gt;screen ipython s&lt;/code&gt; instead&lt;/p&gt;</summary><category term="Amazon EC2"></category><category term="Python"></category></entry></feed>
