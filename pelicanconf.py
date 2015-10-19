@@ -61,7 +61,7 @@ MARKUP = ('md', 'rst')
 #THEME
 THEME = 'themes/alchemy'
 BOOTSWATCH = 'sandstone'
-PYGMENTS = 'colorful'
+PYGMENTS = 'monokai'
 NAVBAR_INVERSE = 'true'
 LANDING_PAGE = 'http://pengyin-shan.com'
 
