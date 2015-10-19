@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="http://shanpy.github.io/mathcorner/probabilistic-programming-and-bayesian-methods-for-hacker-reading-note-chapter-1.html" />
+
+    <title>  Pengyin Shan and Math, Finance, Statistics &mdash; Probabilistic Programming and Bayesian Methods for Hackers Reading Note - Chapter 1
+</title>
+
+
+
+
+    
+      <link rel="stylesheet" href="http://shanpy.github.io/mathcorner/theme/css/bootswatch/sandstone.css">    
+    <link rel="stylesheet" href="http://shanpy.github.io/mathcorner/theme/css/icons.css">
+    <!-- Pyments credits to: Rickle Land - https://github.com/richleland/pygments-css -->
+    <link rel="stylesheet" href="http://shanpy.github.io/mathcorner/theme/css/pygments/colorful.css">
+ 
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <meta name="author" content="Pengyin Shan">
+    <meta name="description" content="This is a reading notes for Probabilistic Programming and Bayesian Methods for Hackers, Chapter 1, The Philosophy of Bayesian Inference.">
+  <meta name="tags" contents="Statistics, Python, Data Science, ">
+</head>
+
+<body>
+<header class="page-header">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="header-inner">
+        <h2 class="header-name">
+          <a class="nodec" href="http://shanpy.github.io/mathcorner">Pengyin Shan and Math, Finance, Statistics</a>
+        </h2>
+        <h3 class="header-text">A corner for Pengyin Shan to record her thoughs in Math, Finance and Statistics</h3>
+        
+      </div>
+    </div>
+    <!--Modify NavBar -->
+        <nav class="navbar navbar-inverse">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Menu</a>
+          </div>
+
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li><a href="http://shanpy.github.io/mathcorner/category/data-science.html">Data Science</a></li>
+                <li><a href="http://shanpy.github.io/mathcorner/category/python.html">Python</a></li>
+              <li><a class="nodec" href="http://shanpy.github.io/mathcorner/tags.html">Tags</a></li>
+              <li><a class="nodec" href="http://shanpy.github.io/mathcorner/archives.html">Archives</a></li>
+              <li><a class="nodec icon-mail-alt" href="mailto:shanpy901115@gmail.com"></a></li>
+              <li><a class="nodec icon-github" href="https://github.com/shanpy"></a></li>
+            </ul>
+           </div> 
+        </nav>
+  </div>
+</header> <!-- /.header -->  <div class="container">
+  <div class="post full-post">
+    <h1 class="post-title">
+      <a href="/probabilistic-programming-and-bayesian-methods-for-hacker-reading-note-chapter-1.html" title="Permalink to Probabilistic Programming and Bayesian Methods for Hackers Reading Note - Chapter 1">Probabilistic Programming and Bayesian Methods for Hackers Reading Note - Chapter&nbsp;1</a>
+    </h1>
+    <ul class="list-inline">
+      <li class="post-date">
+        <a class="text-muted" href="/probabilistic-programming-and-bayesian-methods-for-hacker-reading-note-chapter-1.html" title="2015-01-13T00:00:00-05:00">Tue 13 January 2015</a>
+      </li>
+      <li class="muted">&middot;</li>
+      <li class="post-category">
+        <a href="http://shanpy.github.io/mathcorner/category/data-science.html">Data Science</a>
+      </li>
+        <li class="muted">&middot;</li>
+        <li>
+            <a href="/tag/Statistics.html">Statistics</a>,             <a href="/tag/Python.html">Python</a>,             <a href="/tag/Data Science.html">Data Science</a>        </li>
+        <li class="muted">&middot;</li>
+        <li>
+          <address class="post-author">
+            By <a href="http://shanpy.github.io/mathcorner/author/pengyin-shan.html">Pengyin Shan</a>
+          </address>
+        </li>
+    </ul>
+    <div class="post-content">
+      <p>This post is being transferred from <a href="shanpy.github.io/techblog">my old blog site</a>, about Python development for&nbsp;statistics.</p>
+<h2>The Philosophy of Bayesian&nbsp;Inference</h2>
+<p><strong>Bayesian inference</strong> is simply updating your <strong>beliefs</strong> after considering new evidence. We update our beliefs about an outcome; ralely can we be absolutely sure unless we rule out all other&nbsp;alternatives.</p>
+<p>In Bayesian, the <strong>probability</strong> is consideres as <strong>believablity</strong> of an event. i.e. how <strong>confident</strong> we&nbsp;are.</p>
+<p><strong>Frequentist</strong>: assume probablity is the <strong>long-run</strong> frequency of&nbsp;events. </p>
+<p><strong>Bayesian</strong>: asssume probablity is a measure of <strong>belief</strong>. Note that belief is assigneed <strong>individually</strong>, which means there can be <strong>conflicting</strong> of&nbsp;blieves.</p>
+<p><strong>P(A)</strong>: prior&nbsp;probability</p>
+<p><strong>P(A|X)</strong>: the probablity of A given the evidence <code>X</code></p>
+<p>For example: <code>P(A)</code>: The code likely has a bug with it. <code>P(A|X)</code>: The code passed all <code>X</code> tests, there still might be a bug, but its presence is less likely&nbsp;now</p>
+<p>Every time after a new evidence <code>X</code> comes, we <strong>re-weighted</strong> the <strong>prior probablity</strong> to incorporated the new evidence. After this process, our guesses become <strong>less wrong</strong>. i.e. we try to be more <strong>right</strong> after each&nbsp;guess.</p>
+<p><strong>Frequentist</strong> will return a number, while Bayesians will return&nbsp;probablity. </p>
+<p>Forthe example above, if asking &#8220;My code passes all tests. Is my code bug-free?&#8221;, Frequentist will return&nbsp;yes. </p>
+<p>If asking &#8220;<em>Often my code has bugs. (prior parameter)</em> My code passed all X tests. Is my code bug-free?&#8221;, Bayesians will return &#8220;Yes, with probablity 0.8; No, with probablity&nbsp;0.2&#8221;.</p>
+<p>Denote <code>N</code> as the number of <strong>instances of evidence</strong> we possess. As we gather an <strong>infinite</strong> amount of evidence, say as <code>N -&gt; Infinity</code>, our Bayesian results (often) align with frequentist&nbsp;results.</p>
+<p>So for large <code>N</code>, statistical inference is more or less <strong>objective</strong></p>
+<p>For small <code>N</code>, inference is much more <strong>unstable</strong>: Frequentist estimates have more variance and larger confidence&nbsp;intervals.</p>
+<p>Hence Bayesians introduce a <strong>prior</strong> and returning <strong>probablities</strong>, it can <strong>preserve</strong> the <strong>uncentainty</strong> that reflects the instability (not stable) of statistical inference of a small <code>N</code> dataset.</p>
+<h3>Bayes&#8217;&nbsp;Theorem</h3>
+<p>if our code passes <code>X</code> tests, we want to <strong>update</strong> our belief to incorporate this. We call this new belief the <strong>posterior probability</strong>. </p>
+<p>Bayes&#8217; Theorem is used for updating&nbsp;process.</p>
+<p>Bayesian inference merely uses it to connect <strong>prior probabilities</strong> <code>P(A)</code> with an updated <strong>posterior probabilities</strong> <code>P(A|X)</code> .</p>
+<h3>The Understanding of Variables for Coding&nbsp;Example</h3>
+<p>Assume <code>A</code> means the event that code has <strong>no</strong> bug and <code>X</code> means code passes <code>X</code> tests. Assume <code>P(A) = p</code>.</p>
+<p><strong>P(A|X)</strong>: the probability for no bugs, giving passing debug test <code>X</code>.</p>
+<p><strong>P(X|A)</strong>: the probability that code passes <code>X</code> test given there is no bugs. This always be&nbsp;1.</p>
+<div class="highlight"><pre><span class="c">#Since We can get P(X) by following way:</span>
+
+<span class="n">P</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span> <span class="ow">and</span> <span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span> <span class="ow">and</span> <span class="o">~</span><span class="n">A</span><span class="p">(</span><span class="ow">not</span> <span class="n">A</span><span class="p">))</span>
+    <span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span><span class="o">|</span><span class="n">A</span><span class="p">)</span><span class="n">P</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span><span class="o">|~</span><span class="n">A</span><span class="p">)</span><span class="n">P</span><span class="p">(</span><span class="o">~</span><span class="n">A</span><span class="p">)</span>
+    <span class="o">=</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span><span class="o">|</span><span class="n">A</span><span class="p">)</span><span class="n">p</span> <span class="o">+</span> <span class="n">P</span><span class="p">(</span><span class="n">X</span><span class="o">|~</span><span class="n">A</span><span class="p">)(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c">#Assume P(X|~A) = 0.5 here, and we know P(X|A) = 1  </span>
+<span class="n">P</span><span class="p">(</span><span class="n">A</span><span class="o">|</span><span class="n">X</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">p</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="n">p</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">))</span>
+<span class="c">#This is the posterior probability</span>
+</pre></div>
+
+
+<h2>Probability&nbsp;Distributions</h2>
+<p>Let <code>Z</code> be some random variable. Then associated with <code>Z</code> is a <strong>probability distribution function</strong> that assigns probablities to the different <strong>outcomes</strong> <code>Z</code> can take. A <strong>probability distribution</strong> is a curve where the probability of an outcome is <em>proportional</em> to the <em>height</em> of the&nbsp;curve.</p>
+<p><code>Z</code> can be discreate: only assume values on a speical list. Such as populations, movie ratings,&nbsp;etc.</p>
+<p><code>Z</code> can be continous: takes aribitrarily exact values. Such as temporature, speed,&nbsp;etc</p>
+<p><code>Z</code> can be mixed by two types&nbsp;above.</p>
+<h3>If Z is&nbsp;discreate</h3>
+<p>If <code>Z</code> is discreate, its distribution is called <strong>probability mass function</strong>, which measures the probablity <code>Z</code> takes on the value <code>k</code>, denoted <code>P(Z=k)</code>.</p>
+<p>We saw <code>Z</code> is <strong>posisson-distributed</strong>&nbsp;if: </p>
+<ul>
+<li>
+<p><code>λ</code> is called a parameter of the distribution, or <strong>intensity</strong> of the <strong>possison distribution</strong> and it controls the distribution&#8217;s <strong>shape</strong>. Here, <code>λ</code> can be any <em>positive</em>&nbsp;number.</p>
+</li>
+<li>
+<p>if <code>λ</code> increate, add probability to larger values. if <code>λ</code> decrease, add probability to smaller&nbsp;values.</p>
+</li>
+<li>
+<p><code>k</code> must be a <strong>non-negative</strong>&nbsp;integer.</p>
+</li>
+</ul>
+<p>If a random variable <code>Z</code> has a <strong>poisson mass distribution</strong>, we can express as: <code>Z ~ Poi(λ)</code></p>
+<p>For a poisson distribution, its expected value is equal to its parameter, i.e. <code>E[Z | λ] = λ</code></p>
+<h3>If Z is&nbsp;continuous</h3>
+<p>If <code>Z</code> is continous, its distribution is called <strong>probability density function</strong>. </p>
+<blockquote>
+<p><code>z</code> can only take <strong>non-negative</strong> value, including&nbsp;non-integer</p>
+</blockquote>
+<p>If <code>Z</code> has an exponential distribution, we say <code>Z</code> is <strong>exponential</strong> and we have: <code>Z ~ Exp(λ)</code> and <code>E[Z | λ] = 1/λ</code></p>
+<div class="highlight"><pre><span class="c">#PyMC</span>
+
+<span class="kn">import</span> <span class="nn">pymc</span> <span class="kn">as</span> <span class="nn">pm</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">count_data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">lambda_1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Exponential</span><span class="p">(</span><span class="s">&quot;lambda_1&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>  <span class="c">#get lambda value</span>
+<span class="n">lambda_2</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Exponential</span><span class="p">(</span><span class="s">&quot;lambda_2&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+
+<span class="n">tau</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">DistcreateUniform</span><span class="p">(</span><span class="s">&quot;tau&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="n">n_count_data</span><span class="p">)</span>
+</pre></div>
+    </div>
+  </div>
+  <hr class="separator">
+  <div class="col-md-8 col-md-offset-2">
+  <div id="disqus_thread">
+    <script>
+      /*
+      var disqus_shortname = ;
+      (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
+         document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+      */
+
+      /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
+    var disqus_shortname = 'pengyinblog'; // Required - Replace example with your forum shortname
+    //var disqus_identifier = 'a unique identifier for each page where Disqus is present';
+    var disqus_title = 'Pengyin Shan and Math, Finance, Statistics';
+    //var disqus_url = 'a unique URL for each page where Disqus is present';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript=Pengyin Shan and Math, Finance, Statistics">
+        comments powered by Disqus.
+      </a>
+    </noscript>
+    <a href="https://disqus.com" class="dsq-brlink">
+      blog comments powered by <span class="logo-disqus">Disqus</span>
+    </a>
+  </div>
+  </div>
+  </div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-center">
+      Pengyin Shan Alway Learning. Getting Things Done..
+    </p>
+    <div class="text-center">
+      Generated by <a href="http://getpelican.com" target="_blank">Pelican</a> with the <a href="http://github.com/nairobilug/pelican-alchemy">alchemy</a> theme, modified by Pengyin Shan, 2015.
+    </div>
+  </div>
+</footer> <!-- /.footer -->
+  <script src="http://shanpy.github.io/mathcorner/theme/js/jquery.min.js"></script>
+  <script src="http://shanpy.github.io/mathcorner/theme/js/bootstrap.min.js"></script>
+
+  <!--Back to Top-->
+  <a style="position: fixed; bottom:0.5em;left:0.5em;" href="#" title="Click to go to top">Go to Top</a>
+</body> <!-- 42 -->
+
+</html>
