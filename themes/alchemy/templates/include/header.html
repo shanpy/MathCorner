@@ -1,26 +1,11 @@
 <header class="page-header">
-  <div class="container">
-    {% if PROFILE_IMAGE %}
-      <div class="header-image pull-left">
-        <a class="nodec" href="{{ SITEURL }}"><img src={{ PROFILE_IMAGE }}></a>
-      </div>
-    {% endif %}
-    <div class="jumbotron">
-      <div class="header-inner">
-        <h2 class="header-name">
-          <a class="nodec" href="{{ SITEURL }}">{{ SITENAME }}</a>
-        </h2>
-        <h3 class="header-text">{{ SITE_SUBTEXT }}</h3>
-        
-      </div>
-    </div>
-    <!--Modify NavBar -->
+  <!--Modify NavBar -->
         {% if NAVBAR_INVERSE %}
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
         {% else %}
-        <nav class="navbar">
+        <nav class="navbar navbar-fixed-top">
         {% endif %}
-
+        <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -72,6 +57,24 @@
             {% endif %}
             </ul>
            </div> 
+          </div>
         </nav>
-  </div>
+        <div class="jumbotron">
+         <div class="container">
+          {% if PROFILE_IMAGE %}
+            <div class="header-image pull-left">
+              <a class="nodec" href="{{ SITEURL }}"><img src={{ PROFILE_IMAGE }}></a>
+            </div>
+          {% endif %}
+            <div class="header-inner">
+              <h2 class="header-name">
+                <a class="nodec" href="{{ SITEURL }}">{{ SITENAME }}</a>
+              </h2>
+              <h3 class="header-text">{{ SITE_SUBTEXT }}</h3>
+              {% if LANDING_PAGE %}
+                <p><a class="btn btn-primary" role = "button" href= "{{ LANDING_PAGE }}">Go back to Landing Page >></a></p>
+              {% endif %}  
+            </div>  
+          </div>
+        </div>
 </header> <!-- /.header -->

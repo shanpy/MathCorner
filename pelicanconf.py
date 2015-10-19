@@ -63,6 +63,7 @@ THEME = 'themes/alchemy'
 BOOTSWATCH = 'sandstone'
 PYGMENTS = 'colorful'
 NAVBAR_INVERSE = 'true'
+LANDING_PAGE = 'http://pengyin-shan.com'
 
 TYPOGRIFY = True
 PAGES_ON_MENU = True

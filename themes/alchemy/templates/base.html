@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}" />
 
-    <title>{% block title %}{{ SITE_SUBTEXT }}{% endblock title %}</title>
-
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    {% if FAVICON and FAVICON_TYPE%}
+      <link rel='shortcut icon' type='{{ FAVICON_TYPE }}' href='{{ FAVICON }}' />
+    {% endif %}
     {% if EXTRA_FAVICON %}
       <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
       <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
@@ -57,9 +59,6 @@
 
   <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
   <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-
-  <!--Back to Top-->
-  <a style="position: fixed; bottom:0.5em;left:0.5em;" href="#" title="Click to go to top">Go to Top</a>
 </body> <!-- 42 -->
 
 </html>
