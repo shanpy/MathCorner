@@ -60,7 +60,7 @@ MARKUP = ('md', 'rst')
 
 #THEME
 THEME = 'themes/alchemy'
-BOOTSWATCH = 'sandstone'
+BOOTSWATCH = 'darkly'
 PYGMENTS = 'monokai'
 NAVBAR_INVERSE = 'true'
 LANDING_PAGE = 'http://pengyin-shan.com'
@@ -86,13 +86,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Landing Page', 'http://pengyin-shan.com'),
-         ('My Technical/Programming Blog', 'http://pengyin-shan/blogcode')
+LINKS = (
+         ('My Technical Blog', 'http://pengyin-shan.com/blogcode'),
          )
 
 SOCIAL = (
-	('Linkedin', 'https://www.linkedin.com/in/pengyinshan'), 
-    ('Github', 'https://github.com/shanpy'),
+	('My Linkedin', 'https://www.linkedin.com/in/pengyinshan'), 
+    #('Github', 'https://github.com/shanpy'),
 	)
 # Share
 SHARE = True
