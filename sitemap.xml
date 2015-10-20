@@ -5,41 +5,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/</loc>
-<lastmod>2015-10-18T20:53:06-00:00</lastmod>
+<lastmod>2015-10-19T22:12:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/archives.html</loc>
-<lastmod>2015-10-18T20:53:06-00:00</lastmod>
+<lastmod>2015-10-19T22:12:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/tags.html</loc>
-<lastmod>2015-10-18T20:53:06-00:00</lastmod>
+<lastmod>2015-10-19T22:12:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/categories.html</loc>
-<lastmod>2015-10-18T20:53:06-00:00</lastmod>
+<lastmod>2015-10-19T22:12:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/an-introduction-to-think-stats-chapter-1.html</loc>
-<lastmod>2015-05-30T00:00:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/how-to-build-a-basic-nikola-blog-and-deloy-to-github-page.html</loc>
 <lastmod>2015-05-30T00:00:00-04:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -53,20 +46,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://shanpy.github.io/mathcorner/python-basics.html</loc>
-<lastmod>2015-05-30T00:00:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/use-amazon-ec2-to-host-ipython-notebook.html</loc>
-<lastmod>2015-05-30T00:00:00-04:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://shanpy.github.io/mathcorner/category/data-science.html</loc>
 <lastmod>2015-05-30T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
@@ -74,14 +53,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://shanpy.github.io/mathcorner/category/python.html</loc>
-<lastmod>2015-05-30T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/tag/nikola.html</loc>
+<loc>http://shanpy.github.io/mathcorner/tag/python.html</loc>
 <lastmod>2015-05-30T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -96,27 +68,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://shanpy.github.io/mathcorner/tag/data-science.html</loc>
-<lastmod>2015-05-30T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/tag/python.html</loc>
-<lastmod>2015-05-30T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/tag/github.html</loc>
-<lastmod>2015-05-30T00:00:00-04:56</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://shanpy.github.io/mathcorner/tag/amazon-ec2.html</loc>
 <lastmod>2015-05-30T00:00:00-04:56</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
