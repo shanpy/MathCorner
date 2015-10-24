@@ -59,7 +59,64 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</summary><category term="CFA"></category><category term="Math"></category><category term="Finance"></category><category term="Economics"></category></entry><entry><title>Tips of Markdown and LaTex</title><link href="http://shanpy.github.io/mathcorner/tips-of-markdown-and-latex.html" rel="alternate"></link><updated>2015-10-24T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-10-24:mathcorner/tips-of-markdown-and-latex.html</id><summary type="html">&lt;h4&gt;Money&lt;/h4&gt;
-&lt;p&gt;To show a dollar sign &lt;code&gt;$&lt;/code&gt;, use &lt;code&gt;\$ 000,000.00&lt;/code&gt;. Example: \$&amp;nbsp;123,456,78.90&lt;/p&gt;</summary><category term="Markdown"></category><category term="Latex"></category></entry><entry><title>An Introduction to Think Stats - Chapter 1</title><link href="http://shanpy.github.io/mathcorner/an-introduction-to-think-stats-chapter-1.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/an-introduction-to-think-stats-chapter-1.html</id><summary type="html">&lt;h1&gt;Chapter 1: Exploratory Data&amp;nbsp;Analysis&lt;/h1&gt;
+&lt;p&gt;To show a dollar sign &lt;code&gt;$&lt;/code&gt;, use &lt;code&gt;\$ 000,000.00&lt;/code&gt;. Example: &lt;span class="math"&gt;\(\\)&lt;/span&gt;$&amp;nbsp;123,456,78.90&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    var location_protocol = (false) ? 'https' : document.location.protocol;
+    if (location_protocol !== 'http' &amp;&amp; location_protocol !== 'https') location_protocol = 'https:';
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = location_protocol + '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="Markdown"></category><category term="Latex"></category></entry><entry><title>An Introduction to Think Stats - Chapter 1</title><link href="http://shanpy.github.io/mathcorner/an-introduction-to-think-stats-chapter-1.html" rel="alternate"></link><updated>2015-05-30T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-01-13:mathcorner/an-introduction-to-think-stats-chapter-1.html</id><summary type="html">&lt;h1&gt;Chapter 1: Exploratory Data&amp;nbsp;Analysis&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;Anecdotal Evidence&lt;/strong&gt; is the evidence based on the data that is unpublished and usually personal, rather than by a well-designed&amp;nbsp;study.&lt;/p&gt;
 &lt;p&gt;Anecdotal Evidence usually fails because of four&amp;nbsp;reasons:&lt;/p&gt;
 &lt;ul&gt;
