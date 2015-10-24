@@ -59,7 +59,7 @@
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;</summary><category term="CFA"></category><category term="Math"></category><category term="Finance"></category><category term="Economics"></category></entry><entry><title>Tips of Markdown and LaTex</title><link href="http://shanpy.github.io/mathcorner/tips-of-markdown-and-latex.html" rel="alternate"></link><updated>2015-10-24T00:00:00-04:00</updated><author><name>Pengyin Shan</name></author><id>tag:shanpy.github.io,2015-10-24:mathcorner/tips-of-markdown-and-latex.html</id><summary type="html">&lt;h4&gt;Money&lt;/h4&gt;
-&lt;p&gt;To show a dollar sign &lt;code&gt;$&lt;/code&gt;, use &lt;code&gt;\$ 000,000.00&lt;/code&gt;. Example: &lt;span class="math"&gt;\(\\)&lt;/span&gt;$&amp;nbsp;123,456,78.90&lt;/p&gt;
+&lt;p&gt;To show a dollar sign &lt;code&gt;$&lt;/code&gt;, use &lt;code&gt;\$ 000,000.00&lt;/code&gt;. Example: &lt;span class="math"&gt;\(\\)&lt;/span&gt; 123,456,78.90 and &lt;span class="math"&gt;\(\\\)&lt;/span&gt;&amp;nbsp;123,456,78.90&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
