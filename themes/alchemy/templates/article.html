@@ -46,9 +46,17 @@
     <div class="post-content">
       {{ article.content }}
     </div>
-  </div>
-  <hr class="separator">
-  <div class="col-md-12">
-    {% include 'include/disqus_comments.html' %}
-  </div>
+
+    {% if article.related_posts %}
+    <hr class="separator">
+    <div class="col-md-12">
+      {% include 'include/related_posts.html' %}
+    </div>
+    {% endif %}
+    
+    </div>
+    <hr class="separator">
+    <div class="col-md-12">
+      {% include 'include/disqus_comments.html' %}
+    </div>
 {% endblock %}
